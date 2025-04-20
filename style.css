@@ -1,0 +1,67 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: black;
+  }
+
+  canvas {
+    display: block;
+  }
+
+  #btnMusica {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: rgba(255,255,255,0.2);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .mensaje-romantico {
+      position: absolute;
+      top: 20%;
+      width: 100%;
+      text-align: center;
+      font-size: 2rem;
+      color: white;
+      opacity: 0;
+      animation: flotar 6s ease-in-out forwards;
+      text-shadow: 0 0 10px #ff5, 0 0 20px #f0f;
+  }
+
+  @keyframes flotar {
+      0% {
+          opacity: 0; 
+          transform: translateY(20px);
+      } 10% {
+          opacity: 1; 
+      } 90% {
+          opacity: 1;
+      } 100% {
+          opacity: 0;
+          transform: translateY(-40px);
+      }
+  }
+
+  .estrella {
+      position: absolute;
+      background: white;
+      border-radius: 50%;
+      width: 2px;
+      height: 2px;
+      opacity: 0.8;
+      animation: parpadear 2s infinite ease-in-out alternate;
+  }
+
+  @keyframes parpadear {
+      0% {
+          opacity: 0.4;
+      } 100% {
+          opacity: 1;
+      }
+  }
